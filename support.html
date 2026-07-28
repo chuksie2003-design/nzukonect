@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+
+  <meta
+    name="description"
+    content="Official support centre for the NzuKonect Community Management Platform."
+  />
+
+  <meta name="theme-color" content="#071b3d" />
+
+  <title>NzuKonect Support Centre</title>
+
+  <style>
+    :root {
+      --navy: #071b3d;
+      --blue: #0972e3;
+      --teal: #00a8a8;
+      --green: #28c76f;
+
+      --text: #1f2937;
+      --muted: #667085;
+      --background: #f6f8fb;
+      --surface: #ffffff;
+      --border: #d9e1ea;
+
+      --soft-blue: #eef6ff;
+      --soft-green: #effbf4;
+
+      --shadow:
+        0 1px 3px rgba(16, 24, 40, 0.08),
+        0 12px 30px rgba(16, 24, 40, 0.07);
+
+      --radius: 18px;
+      --content-width: 1000px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: var(--navy);
+    }
+
+    a:focus-visible {
+      outline: 3px solid rgba(9, 114, 227, 0.32);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .site-header {
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(40, 199, 111, 0.18),
+          transparent 34%
+        ),
+        linear-gradient(135deg, var(--navy), #0a3978);
+
+      color: #ffffff;
+    }
+
+    .header-inner {
+      width: min(var(--content-width), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 50px 0 46px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+
+      width: 64px;
+      height: 64px;
+      flex: 0 0 64px;
+
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 18px;
+
+      background: rgba(255, 255, 255, 0.97);
+      color: var(--navy);
+
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -2px;
+    }
+
+    .brand-name {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.1;
+    }
+
+    .brand-tagline {
+      margin: 6px 0 0;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .header-title {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(36px, 6vw, 58px);
+      line-height: 1.08;
+      letter-spacing: -1.8px;
+    }
+
+    .header-copy {
+      max-width: 760px;
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, 0.84);
+      font-size: 18px;
+    }
+
+    .page-shell {
+      width: min(var(--content-width), calc(100% - 32px));
+      margin: -22px auto 64px;
+      position: relative;
+    }
+
+    .support-nav {
+      position: sticky;
+      top: 12px;
+      z-index: 10;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      margin-bottom: 28px;
+      padding: 14px;
+
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+
+      backdrop-filter: blur(12px);
+    }
+
+    .support-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 9px 15px;
+
+      border: 1px solid transparent;
+      border-radius: 10px;
+
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .support-nav a:hover {
+      background: var(--soft-blue);
+      border-color: #cfe4ff;
+    }
+
+    .card {
+      scroll-margin-top: 100px;
+
+      margin-bottom: 28px;
+      padding: clamp(24px, 5vw, 42px);
+
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .card h2 {
+      margin: 0 0 16px;
+      color: var(--navy);
+      font-size: clamp(26px, 4vw, 34px);
+      line-height: 1.2;
+      letter-spacing: -0.6px;
+    }
+
+    .card h3 {
+      margin: 30px 0 8px;
+      color: var(--navy);
+      font-size: 20px;
+      line-height: 1.35;
+    }
+
+    .card p {
+      margin: 0 0 16px;
+    }
+
+    .card ul {
+      margin: 8px 0 20px;
+      padding-left: 24px;
+    }
+
+    .card li {
+      margin: 8px 0;
+    }
+
+    .welcome-box {
+      margin-top: 22px;
+      padding: 20px 22px;
+
+      background: var(--soft-blue);
+      border: 1px solid #cfe4ff;
+      border-left: 5px solid var(--blue);
+      border-radius: 12px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .contact-item {
+      padding: 20px;
+      background: var(--soft-green);
+      border: 1px solid #cdeedb;
+      border-radius: 12px;
+    }
+
+    .contact-item h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+
+    .faq-item {
+      padding: 0 0 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .faq-item h3 {
+      margin-bottom: 8px;
+    }
+
+    .button-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 46px;
+      margin-top: 8px;
+      padding: 11px 18px;
+
+      background: var(--blue);
+      border-radius: 10px;
+
+      color: #ffffff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .button-link:hover {
+      background: var(--navy);
+      color: #ffffff;
+    }
+
+    .version-card {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(9, 114, 227, 0.08),
+          rgba(40, 199, 111, 0.08)
+        ),
+        var(--surface);
+    }
+
+    .version {
+      margin-bottom: 4px;
+      color: var(--navy);
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .back-to-top {
+      display: inline-block;
+      margin-top: 26px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .site-footer {
+      padding: 30px 16px;
+      background: var(--navy);
+      color: rgba(255, 255, 255, 0.76);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .site-footer strong {
+      color: #ffffff;
+    }
+
+    .site-footer p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 720px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .support-nav {
+        position: static;
+      }
+
+      .support-nav a {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .header-inner {
+        padding-top: 34px;
+      }
+
+      .brand-mark {
+        width: 54px;
+        height: 54px;
+        flex-basis: 54px;
+        border-radius: 15px;
+        font-size: 30px;
+      }
+
+      .card {
+        padding: 24px 20px;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      .site-header {
+        background: #ffffff;
+        color: #000000;
+      }
+
+      .brand-tagline,
+      .header-copy {
+        color: #333333;
+      }
+
+      .support-nav,
+      .back-to-top {
+        display: none;
+      }
+
+      .page-shell {
+        width: 100%;
+        margin: 0;
+      }
+
+      .card {
+        border: 0;
+        box-shadow: none;
+        page-break-inside: avoid;
+      }
+
+      .site-footer {
+        background: #ffffff;
+        color: #333333;
+      }
+
+      .site-footer strong {
+        color: #000000;
+      }
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <div class="brand" aria-label="NzuKonect">
+        <!--
+          Replace this placeholder with the approved NzuKonect logo image:
+
+          <img
+            src="/images/nzukonect-logo.png"
+            alt="NzuKonect"
+            width="64"
+            height="64"
+          />
+        -->
+
+        <div class="brand-mark" aria-hidden="true">N</div>
+
+        <div>
+          <p class="brand-name">NzuKonect</p>
+          <p class="brand-tagline">Connecting Communities</p>
+        </div>
+      </div>
+
+      <h1 class="header-title">Support Centre</h1>
+
+      <p class="header-copy">
+        Official support for the NzuKonect Community Management Platform.
+      </p>
+
+    </div>
+  </header>
+
+  <main class="page-shell">
+
+    <nav class="support-nav" aria-label="Support page navigation">
+      <a href="#welcome">Welcome</a>
+      <a href="#contact-support">Contact Support</a>
+      <a href="#faq">Frequently Asked Questions</a>
+      <a href="#report-problem">Report a Problem</a>
+      <a href="#policies">Policies</a>
+    </nav>
+
+
+    <section class="card" id="welcome">
+
+      <h2>Welcome</h2>
+
+      <p>
+        Welcome to the official support centre for
+        <strong>NzuKonect</strong>.
+      </p>
+
+      <p>
+        NzuKonect is a Community Management Platform used by participating
+        organisations to manage membership, payments, attendance, meetings,
+        governance, records and communications.
+      </p>
+
+      <div class="welcome-box">
+        <p>
+          Your organisation manages its own members, authorised administrators
+          and organisational records within NzuKonect.
+        </p>
+      </div>
+
+    </section>
+
+
+    <section class="card" id="contact-support">
+
+      <h2>Contact Support</h2>
+
+      <p>
+        Contact our support team for technical, account, privacy or
+        child-safety assistance.
+      </p>
+
+      <div class="contact-grid">
+
+        <div class="contact-item">
+          <h3>Primary Support</h3>
+
+          <p>
+            <a href="mailto:support@benavilleglobal.com">
+              support@benavilleglobal.com
+            </a>
+          </p>
+        </div>
+
+        <div class="contact-item">
+          <h3>Response Time</h3>
+
+          <p>
+            We aim to respond to support enquiries within
+            <strong>one to two business days</strong>.
+          </p>
+        </div>
+
+      </div>
+
+      <p class="muted">
+        Please identify the organisation connected to your account when
+        contacting support.
+      </p>
+
+    </section>
+
+
+    <section class="card" id="faq">
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+
+        <h3>I cannot sign in.</h3>
+
+        <p>
+          Confirm that you are using the email address registered with your
+          participating organisation.
+        </p>
+
+        <p>
+          Use the <strong>Forgot Password</strong> option on the sign-in screen
+          if you need to reset your password. Contact your organisation
+          administrator if your registered email address is incorrect or your
+          account has not yet been activated.
+        </p>
+
+      </div>
+
+      <div class="faq-item">
+
+        <h3>My personal information is incorrect.</h3>
+
+        <p>
+          Sign in and open the relevant profile or personal-details section.
+          Update any fields that your organisation permits members to edit.
+        </p>
+
+        <p>
+          Contact your organisation administrator if the field is locked or
+          cannot be changed.
+        </p>
+
+      </div>
+
+      <div class="faq-item">
+
+        <h3>My payment or dues history appears incorrect.</h3>
+
+        <p>
+          Financial records are maintained by authorised administrators of
+          your participating organisation.
+        </p>
+
+        <p>
+          Contact the organisation’s finance officer or administrator if you
+          believe a payment, donation or subscription has been omitted,
+          duplicated or recorded incorrectly.
+        </p>
+
+      </div>
+
+      <div class="faq-item">
+
+        <h3>I cannot see my attendance records.</h3>
+
+        <p>
+          Attendance information may be published after an authorised
+          administrator completes or confirms the relevant meeting record.
+        </p>
+
+        <p>
+          Contact your organisation administrator if an expected attendance
+          record remains unavailable or appears inaccurate.
+        </p>
+
+      </div>
+
+      <div class="faq-item">
+
+        <h3>Why can I not access a feature that another member can see?</h3>
+
+        <p>
+          Access to NzuKonect features is controlled by organisation,
+          membership status and assigned user role.
+        </p>
+
+        <p>
+          Some sections are limited to authorised administrators, finance
+          officers, executives or other designated roles.
+        </p>
+
+      </div>
+
+      <div class="faq-item">
+
+        <h3>Is my information secure?</h3>
+
+        <p>
+          NzuKonect uses authentication, encrypted communication and
+          role-based access controls designed to protect personal and
+          organisational information.
+        </p>
+
+        <p>
+          Users should protect their passwords, avoid sharing account access
+          and report suspected unauthorised activity promptly.
+        </p>
+
+      </div>
+
+      <div class="faq-item">
+
+        <h3>How do I delete my account or request deletion of my data?</h3>
+
+        <p>
+          Contact NzuKonect support and your participating organisation.
+          Some organisational or financial records may need to be retained
+          where required for legal, accounting, governance or dispute-resolution
+          purposes.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="card" id="report-problem">
+
+      <h2>Report a Problem</h2>
+
+      <p>
+        Include the following information when reporting a technical issue:
+      </p>
+
+      <ul>
+        <li>Your full name.</li>
+        <li>Your registered email address.</li>
+        <li>The name of your participating organisation.</li>
+        <li>Your device type, such as iPhone, iPad or Android.</li>
+        <li>Your operating-system version, where known.</li>
+        <li>Your NzuKonect app version, where known.</li>
+        <li>A clear description of the problem.</li>
+        <li>The steps that led to the problem.</li>
+        <li>The date and approximate time the issue occurred.</li>
+        <li>Screenshots or screen recordings where appropriate.</li>
+      </ul>
+
+      <p>
+        Do not include passwords, full payment-card details or other highly
+        sensitive authentication information in a support message.
+      </p>
+
+      <a
+        class="button-link"
+        href="mailto:support@benavilleglobal.com?subject=NzuKonect%20Support%20Request"
+      >
+        Email NzuKonect Support
+      </a>
+
+    </section>
+
+
+    <section class="card" id="policies">
+
+      <h2>Policies and Safety</h2>
+
+      <p>
+        Review the NzuKonect policies for information about privacy, data
+        protection, platform use and child safety.
+      </p>
+
+      <ul>
+        <li>
+          <a href="/">
+            Privacy Policy
+          </a>
+        </li>
+
+        <li>
+          <a href="/child-safety.html">
+            Child Safety &amp; CSAE Standards
+          </a>
+        </li>
+      </ul>
+
+      <p class="muted">
+        Update these links if your policy pages use different filenames or
+        GitHub Pages paths.
+      </p>
+
+    </section>
+
+
+    <section class="card version-card" id="version">
+
+      <h2>Version Information</h2>
+
+      <p class="version">
+        Current public version: 1.0
+      </p>
+
+      <p>
+        Platform: NzuKonect
+      </p>
+
+      <p class="muted">
+        Page effective date: 28 July 2026
+      </p>
+
+      <a class="back-to-top" href="#top">
+        Back to top ↑
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+
+    <p>
+      <strong>NzuKonect</strong> — Connecting Communities
+    </p>
+
+    <p>
+      Community Management Platform
+    </p>
+
+    <p>
+      &copy; <span id="copyright-year"></span> NzuKonect.
+      All rights reserved.
+    </p>
+
+  </footer>
+
+
+  <script>
+    document.getElementById("copyright-year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
