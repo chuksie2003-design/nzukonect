@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+
+  <meta
+    name="description"
+    content="Privacy Policy and Child Safety Standards for the NzuKonect Community Management Platform."
+  />
+
+  <meta name="theme-color" content="#071b3d" />
+
+  <title>NzuKonect Policy Centre</title>
+
+  <style>
+    :root {
+      --navy: #071b3d;
+      --blue: #0972e3;
+      --teal: #00a8a8;
+      --green: #28c76f;
+
+      --text: #1f2937;
+      --muted: #667085;
+      --background: #f6f8fb;
+      --surface: #ffffff;
+      --border: #d9e1ea;
+
+      --soft-blue: #eef6ff;
+      --soft-green: #effbf4;
+      --danger: #b42318;
+      --soft-danger: #fff3f2;
+
+      --shadow:
+        0 1px 3px rgba(16, 24, 40, 0.08),
+        0 8px 24px rgba(16, 24, 40, 0.06);
+
+      --radius: 16px;
+      --content-width: 960px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behaviour: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: var(--navy);
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid rgba(9, 114, 227, 0.35);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .site-header {
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(40, 199, 111, 0.18),
+          transparent 34%
+        ),
+        linear-gradient(135deg, var(--navy), #0a3978);
+
+      color: #ffffff;
+    }
+
+    .header-inner {
+      width: min(var(--content-width), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 54px 0 48px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 34px;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 64px;
+      height: 64px;
+      flex: 0 0 64px;
+
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 18px;
+
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+
+      color: var(--navy);
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -2px;
+    }
+
+    .brand-name {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800;
+      letter-spacing: -1.2px;
+      line-height: 1.1;
+    }
+
+    .brand-tagline {
+      margin: 6px 0 0;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .header-title {
+      max-width: 720px;
+      margin: 0;
+      font-size: clamp(34px, 6vw, 58px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+    }
+
+    .header-copy {
+      max-width: 720px;
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 18px;
+    }
+
+    .page-shell {
+      width: min(var(--content-width), calc(100% - 32px));
+      margin: -24px auto 64px;
+      position: relative;
+    }
+
+    .policy-nav {
+      position: sticky;
+      top: 12px;
+      z-index: 10;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      margin-bottom: 28px;
+      padding: 14px;
+
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+
+      backdrop-filter: blur(12px);
+    }
+
+    .policy-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 9px 15px;
+
+      border: 1px solid transparent;
+      border-radius: 10px;
+
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .policy-nav a:hover {
+      background: var(--soft-blue);
+      border-color: #cfe4ff;
+    }
+
+    .policy-card {
+      scroll-margin-top: 100px;
+
+      margin-bottom: 28px;
+      padding: clamp(24px, 5vw, 48px);
+
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .policy-card h2 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: clamp(28px, 4vw, 38px);
+      line-height: 1.2;
+      letter-spacing: -0.8px;
+    }
+
+    .policy-card h3 {
+      margin: 34px 0 10px;
+      color: var(--navy);
+      font-size: 21px;
+      line-height: 1.3;
+    }
+
+    .policy-card h4 {
+      margin: 26px 0 8px;
+      color: var(--navy);
+      font-size: 17px;
+    }
+
+    .policy-card p {
+      margin: 0 0 16px;
+    }
+
+    .policy-card ul {
+      margin: 8px 0 20px;
+      padding-left: 24px;
+    }
+
+    .policy-card li {
+      margin: 7px 0;
+    }
+
+    .effective-date {
+      margin-bottom: 28px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .notice {
+      margin: 24px 0;
+      padding: 20px 22px;
+
+      background: var(--soft-blue);
+      border: 1px solid #cfe4ff;
+      border-left: 5px solid var(--blue);
+      border-radius: 12px;
+    }
+
+    .notice strong {
+      color: var(--navy);
+    }
+
+    .safety-notice {
+      background: var(--soft-danger);
+      border-color: #f5c7c3;
+      border-left-color: var(--danger);
+    }
+
+    .contact-box {
+      margin-top: 26px;
+      padding: 20px;
+
+      background: var(--soft-green);
+      border: 1px solid #cdeedb;
+      border-radius: 12px;
+    }
+
+    .contact-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 18px 0 24px;
+    }
+
+    table {
+      width: 100%;
+      min-width: 620px;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 13px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--soft-blue);
+      color: var(--navy);
+      font-size: 14px;
+    }
+
+    .back-to-top {
+      display: inline-block;
+      margin-top: 28px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .site-footer {
+      padding: 30px 16px;
+      background: var(--navy);
+      color: rgba(255, 255, 255, 0.76);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .site-footer strong {
+      color: #ffffff;
+    }
+
+    .site-footer p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 640px) {
+      .header-inner {
+        padding-top: 34px;
+      }
+
+      .brand-mark {
+        width: 54px;
+        height: 54px;
+        flex-basis: 54px;
+        border-radius: 15px;
+        font-size: 30px;
+      }
+
+      .policy-nav {
+        position: static;
+      }
+
+      .policy-nav a {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .policy-card {
+        padding: 24px 20px;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      .site-header {
+        background: #ffffff;
+        color: #000000;
+      }
+
+      .brand-tagline,
+      .header-copy {
+        color: #333333;
+      }
+
+      .policy-nav,
+      .back-to-top {
+        display: none;
+      }
+
+      .page-shell {
+        width: 100%;
+        margin: 0;
+      }
+
+      .policy-card {
+        box-shadow: none;
+        border: 0;
+        page-break-inside: avoid;
+      }
+
+      .site-footer {
+        background: #ffffff;
+        color: #333333;
+      }
+
+      .site-footer strong {
+        color: #000000;
+      }
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <div class="brand" aria-label="NzuKonect">
+        <!--
+          Replace this CSS brand mark with the approved logo image when available:
+
+          <img
+            src="/images/nzukonect-logo.png"
+            alt="NzuKonect"
+            width="64"
+            height="64"
+          />
+        -->
+
+        <div class="brand-mark" aria-hidden="true">N</div>
+
+        <div>
+          <p class="brand-name">NzuKonect</p>
+          <p class="brand-tagline">Connecting Communities</p>
+        </div>
+      </div>
+
+      <h1 class="header-title">Policy Centre</h1>
+
+      <p class="header-copy">
+        Privacy, data protection and child safety information for the
+        NzuKonect Community Management Platform.
+      </p>
+
+    </div>
+  </header>
+
+  <main class="page-shell">
+
+    <nav class="policy-nav" aria-label="Policy navigation">
+      <a href="#privacy">Privacy Policy</a>
+      <a href="#child-safety">Child Safety &amp; CSAE Standards</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+
+
+    <!-- PRIVACY POLICY -->
+    <article class="policy-card" id="privacy">
+
+      <h2>Privacy Policy</h2>
+
+      <p class="effective-date">
+        <strong>Effective date:</strong> 28 July 2026
+      </p>
+
+      <div class="notice">
+        <strong>About NzuKonect</strong>
+
+        <p>
+          NzuKonect is a community management platform used by participating
+          organisations to manage members, payments, meetings, attendance,
+          communications, events and related organisational activities.
+        </p>
+      </div>
+
+      <h3>1. Introduction</h3>
+
+      <p>
+        NzuKonect (“we”, “our” or “us”) respects your privacy and is committed
+        to protecting personal information processed through the NzuKonect
+        mobile application, website and related services.
+      </p>
+
+      <p>
+        This Privacy Policy explains what information may be collected, how it
+        may be used, when it may be shared and the choices available to users.
+      </p>
+
+      <h3>2. Organisations Using NzuKonect</h3>
+
+      <p>
+        NzuKonect may be used by independent community organisations,
+        associations, charities, clubs, professional bodies and similar
+        groups.
+      </p>
+
+      <p>
+        A participating organisation may determine why and how certain member
+        information is processed within its NzuKonect account. In those
+        circumstances, the organisation may act as the data controller, while
+        NzuKonect provides the technology used to process and store the
+        information.
+      </p>
+
+      <h3>3. Information We May Collect</h3>
+
+      <p>
+        Depending on how NzuKonect is configured and used by your organisation,
+        we may process the following categories of information:
+      </p>
+
+      <ul>
+        <li>
+          Identity information, including name, membership number and profile
+          details.
+        </li>
+
+        <li>
+          Contact information, including email address, telephone number and
+          postal address.
+        </li>
+
+        <li>
+          Organisation and membership information, including membership
+          category, status, roles, committees and attendance records.
+        </li>
+
+        <li>
+          Transaction information, including payments, subscriptions,
+          donations, receipts and related financial records.
+        </li>
+
+        <li>
+          Account information, including authentication details, permissions
+          and user roles.
+        </li>
+
+        <li>
+          Technical information, including device type, operating system,
+          application version, IP address, crash information and security logs.
+        </li>
+
+        <li>
+          Usage information relating to how the platform is accessed and used.
+        </li>
+
+        <li>
+          Communications and support information submitted when contacting
+          NzuKonect or a participating organisation.
+        </li>
+      </ul>
+
+      <h3>4. How Information Is Collected</h3>
+
+      <p>Information may be collected:</p>
+
+      <ul>
+        <li>Directly from you when you register or update your profile.</li>
+
+        <li>
+          From the participating organisation responsible for your membership
+          account.
+        </li>
+
+        <li>
+          Automatically when you use the application or related services.
+        </li>
+
+        <li>
+          When payments, attendance, meetings or other organisational records
+          are created.
+        </li>
+
+        <li>
+          When you contact support or submit a report, enquiry or complaint.
+        </li>
+      </ul>
+
+      <h3>5. How We Use Information</h3>
+
+      <p>Personal information may be used to:</p>
+
+      <ul>
+        <li>Create and administer user accounts.</li>
+
+        <li>Provide and maintain the NzuKonect platform.</li>
+
+        <li>
+          Support membership administration and organisational governance.
+        </li>
+
+        <li>
+          Record payments, donations, subscriptions, attendance and meetings.
+        </li>
+
+        <li>
+          Send service notices, security alerts and organisational
+          communications.
+        </li>
+
+        <li>Provide technical and customer support.</li>
+
+        <li>Improve performance, reliability and user experience.</li>
+
+        <li>
+          Detect, investigate and prevent fraud, misuse or unauthorised access.
+        </li>
+
+        <li>
+          Meet applicable legal, regulatory, safeguarding and accounting
+          obligations.
+        </li>
+      </ul>
+
+      <h3>6. Lawful Basis for Processing</h3>
+
+      <p>
+        Where applicable under United Kingdom data-protection law, information
+        may be processed on one or more of the following bases:
+      </p>
+
+      <ul>
+        <li>Performance of a contract or provision of a requested service.</li>
+
+        <li>Compliance with a legal obligation.</li>
+
+        <li>
+          Legitimate interests in operating, securing and improving the
+          platform.
+        </li>
+
+        <li>Your consent, where consent is required.</li>
+
+        <li>
+          Protection of the vital interests of an individual in an emergency.
+        </li>
+      </ul>
+
+      <h3>7. Data Sharing</h3>
+
+      <p>
+        NzuKonect does not sell personal information.
+      </p>
+
+      <p>Information may be shared with:</p>
+
+      <ul>
+        <li>
+          The participating organisation responsible for your account.
+        </li>
+
+        <li>
+          Authorised administrators and officers of that organisation,
+          according to their assigned permissions.
+        </li>
+
+        <li>
+          Service providers supporting hosting, authentication, communications,
+          analytics, security or technical operations.
+        </li>
+
+        <li>
+          Professional advisers where necessary to protect legal rights.
+        </li>
+
+        <li>
+          Regulators, courts, law-enforcement bodies or public authorities
+          where disclosure is required by law.
+        </li>
+      </ul>
+
+      <h3>8. Data Security</h3>
+
+      <p>
+        NzuKonect uses reasonable technical and organisational safeguards
+        designed to protect information against unauthorised access,
+        disclosure, alteration, loss or misuse.
+      </p>
+
+      <p>These measures may include:</p>
+
+      <ul>
+        <li>Authentication and role-based access controls.</li>
+
+        <li>Encrypted transmission of information.</li>
+
+        <li>Security monitoring and audit records.</li>
+
+        <li>Restricted administrative access.</li>
+
+        <li>Regular application and infrastructure maintenance.</li>
+      </ul>
+
+      <p>
+        No method of electronic transmission or storage is completely secure,
+        and absolute security cannot be guaranteed.
+      </p>
+
+      <h3>9. Data Retention</h3>
+
+      <p>
+        Information is retained only for as long as reasonably necessary to
+        provide the service, support the participating organisation, meet legal
+        or accounting requirements, resolve disputes and enforce agreements.
+      </p>
+
+      <p>
+        Retention periods may vary according to the type of record and the
+        requirements of the relevant organisation.
+      </p>
+
+      <h3>10. Your Data-Protection Rights</h3>
+
+      <p>
+        Depending on the circumstances and applicable law, you may have the
+        right to:
+      </p>
+
+      <ul>
+        <li>Request access to your personal information.</li>
+
+        <li>Request correction of inaccurate or incomplete information.</li>
+
+        <li>Request deletion of information where legally permitted.</li>
+
+        <li>Request restriction of processing.</li>
+
+        <li>Object to certain types of processing.</li>
+
+        <li>Request a portable copy of eligible information.</li>
+
+        <li>Withdraw consent where processing relies on consent.</li>
+
+        <li>
+          Complain to the relevant data-protection supervisory authority.
+        </li>
+      </ul>
+
+      <p>
+        Some requests may need to be directed to the participating organisation
+        responsible for your account.
+      </p>
+
+      <h3>11. Children’s Privacy</h3>
+
+      <p>
+        NzuKonect is intended for authorised community and organisation members
+        aged 18 and above, unless a participating organisation has implemented
+        a separately approved service with appropriate parental consent,
+        safeguarding controls and legal protections.
+      </p>
+
+      <p>
+        NzuKonect does not knowingly permit children to create independent
+        accounts without appropriate authorisation.
+      </p>
+
+      <h3>12. International Data Transfers</h3>
+
+      <p>
+        Where information is processed outside the United Kingdom or the
+        country in which it was collected, appropriate safeguards will be used
+        where required by applicable law.
+      </p>
+
+      <h3>13. Third-Party Services</h3>
+
+      <p>
+        NzuKonect may use third-party service providers for infrastructure,
+        authentication, notifications, analytics, communications or other
+        platform functions.
+      </p>
+
+      <p>
+        Those providers process information according to their contractual and
+        legal obligations.
+      </p>
+
+      <h3>14. Changes to This Privacy Policy</h3>
+
+      <p>
+        This Privacy Policy may be updated to reflect changes to the platform,
+        legal requirements or operating practices.
+      </p>
+
+      <p>
+        The revised effective date will be displayed at the top of this policy.
+        Material changes may also be communicated through the application or
+        other appropriate channels.
+      </p>
+
+      <a class="back-to-top" href="#top">Back to top ↑</a>
+
+    </article>
+
+
+    <!-- CHILD SAFETY AND CSAE -->
+    <article class="policy-card" id="child-safety">
+
+      <h2>Child Safety &amp; CSAE Standards</h2>
+
+      <p class="effective-date">
+        <strong>Effective date:</strong> 28 July 2026
+      </p>
+
+      <div class="notice safety-notice">
+        <strong>Zero-tolerance policy</strong>
+
+        <p>
+          NzuKonect maintains a zero-tolerance policy towards Child Sexual
+          Abuse and Exploitation (CSAE), Child Sexual Abuse Material (CSAM),
+          grooming and any activity that sexualises, exploits or endangers a
+          child.
+        </p>
+      </div>
+
+      <h3>1. Scope</h3>
+
+      <p>
+        These standards apply to every user, participating organisation,
+        administrator, contributor and person accessing NzuKonect services.
+      </p>
+
+      <h3>2. Prohibited Content and Behaviour</h3>
+
+      <p>The following are strictly prohibited:</p>
+
+      <ul>
+        <li>
+          Creating, uploading, possessing, storing, sharing, requesting or
+          linking to CSAM.
+        </li>
+
+        <li>
+          Sexual content, imagery, conversation or activity involving a minor.
+        </li>
+
+        <li>
+          Grooming, coercion, enticement or solicitation of a minor.
+        </li>
+
+        <li>
+          Sexual harassment, threats, blackmail or exploitation involving a
+          minor.
+        </li>
+
+        <li>
+          Attempts to arrange inappropriate or exploitative contact with a
+          child.
+        </li>
+
+        <li>
+          Content that promotes, normalises, facilitates or instructs others
+          in child sexual abuse or exploitation.
+        </li>
+
+        <li>
+          Any activity that places a child at risk of physical, emotional or
+          sexual harm.
+        </li>
+      </ul>
+
+      <h3>3. Reporting Child-Safety Concerns</h3>
+
+      <p>
+        Users, organisations and members of the public may report suspected
+        CSAE, CSAM, grooming or other child-safety concerns by contacting:
+      </p>
+
+      <div class="contact-box">
+        <p>
+          <strong>Child Safety Contact</strong><br />
+          Email:
+          <a href="mailto:support@benavilleglobal.com">
+            support@benavilleglobal.com
+          </a>
+        </p>
+      </div>
+
+      <p>
+        Reports should include as much relevant information as possible,
+        without downloading, forwarding or redistributing suspected illegal
+        content.
+      </p>
+
+      <h3>4. Emergency Situations</h3>
+
+      <p>
+        Where a child is believed to be in immediate danger, contact the
+        emergency services or the appropriate child-protection authority in
+        your country without delay.
+      </p>
+
+      <h3>5. Investigation and Enforcement</h3>
+
+      <p>
+        NzuKonect may investigate reported or detected violations and take
+        appropriate action, including:
+      </p>
+
+      <ul>
+        <li>Restricting access to relevant content or platform functions.</li>
+
+        <li>Removing prohibited content.</li>
+
+        <li>Suspending or permanently terminating accounts.</li>
+
+        <li>
+          Preserving relevant information where legally required.
+        </li>
+
+        <li>
+          Notifying the participating organisation responsible for the account.
+        </li>
+
+        <li>
+          Reporting suspected criminal activity to law-enforcement or
+          child-protection authorities where required or appropriate.
+        </li>
+      </ul>
+
+      <h3>6. Cooperation With Authorities</h3>
+
+      <p>
+        NzuKonect will cooperate with valid legal requests and relevant
+        authorities investigating suspected child sexual abuse, exploitation
+        or endangerment.
+      </p>
+
+      <h3>7. Age Policy</h3>
+
+      <p>
+        The standard NzuKonect platform is intended for authorised users aged
+        <strong>18 and above</strong>.
+      </p>
+
+      <p>
+        Participating organisations must not knowingly create accounts for
+        children without an approved safeguarding framework, an appropriate
+        legal basis and any required parental or guardian consent.
+      </p>
+
+      <h3>8. Safeguarding Responsibilities of Organisations</h3>
+
+      <p>
+        Participating organisations are responsible for implementing suitable
+        safeguarding policies, appointing responsible officers where required,
+        and ensuring that administrators use NzuKonect appropriately.
+      </p>
+
+      <h3>9. Review of These Standards</h3>
+
+      <p>
+        These standards may be revised to reflect legal requirements, platform
+        changes and recognised child-safety practices.
+      </p>
+
+      <a class="back-to-top" href="#top">Back to top ↑</a>
+
+    </article>
+
+
+    <!-- CONTACT -->
+    <article class="policy-card" id="contact">
+
+      <h2>Contact NzuKonect</h2>
+
+      <p>
+        For privacy, account, technical support or child-safety enquiries,
+        contact:
+      </p>
+
+      <div class="contact-box">
+        <p>
+          <strong>NzuKonect Support</strong><br />
+
+          Email:
+          <a href="mailto:support@benavilleglobal.com">
+            support@benavilleglobal.com
+          </a>
+        </p>
+      </div>
+
+      <p>
+        When contacting us, please identify the participating organisation
+        connected to your account where relevant.
+      </p>
+
+      <a class="back-to-top" href="#top">Back to top ↑</a>
+
+    </article>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      <strong>NzuKonect</strong> — Connecting Communities
+    </p>
+
+    <p>
+      Community Management Platform
+    </p>
+
+    <p>
+      &copy; <span id="copyright-year"></span> NzuKonect.
+      All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById("copyright-year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
